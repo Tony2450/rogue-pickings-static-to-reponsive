@@ -62,18 +62,19 @@ header {
 header h1 {
 	width: 100%;
 	padding: 38px 0;
-	display: flex;
-	justify-content: center;
+	text-align: center;
 	border-bottom: 5px solid #45610E;
 }
 
 header h1 span {
 	color: #45610E;
-	padding-right: 12px;
 }
 
 header nav {
-	padding: 20px 0;
+	padding-top: 0;
+	padding-bottom: 20px;
+	padding-left: 0;
+	padding-right: 0;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -81,9 +82,6 @@ header nav {
 
 header nav ul {
 	padding: 0;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
 }
 
 header nav ul li {
@@ -92,9 +90,9 @@ header nav ul li {
 	text-transform: uppercase;
 	padding: 10px 0;
 	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	list-style: none;
 }
 
 header nav ul li a {
@@ -105,6 +103,7 @@ header nav ul li a {
 /********  MAIN STYLES ********/
 /******** TOP SECTION ********/
 /* The widths are in a percentage! */
+
 .main-image img {
 	width: 100%;
 	border-top: 3px solid #77A466;
@@ -125,7 +124,7 @@ header nav ul li a {
 }
 
 .bottom-section .content-wrapper {
-	width: 100%;
+	width: 90%;
 	border-top: 5px solid #EEE;
 	border-bottom: 5px solid #EEE;
 }
@@ -140,6 +139,7 @@ header nav ul li a {
 .section-one {
 	/*width: 29%;*/
 	width: 100%;
+	text-align: left;
 }
 
 .section-two {
@@ -147,15 +147,13 @@ header nav ul li a {
 	width: 100%;
 	border-top: 5px solid #EEE;
 	border-bottom: 5px solid #EEE;
+	text-align: left;
 }
 
 .section-three {
 	width: 100%;
+	text-align: left;
 	/*width: 29%;*/
-}
-
-.bottom-section h3 {
-
 }
 
 .menu-list {
@@ -164,9 +162,11 @@ header nav ul li a {
 }
 
 .menu-list li {
-	color: #45610E;
+	color: #4f6d13;
+	font-weight: 500;
 	font-size: 1em;
 	line-height: 2.25em;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /******** FOOTER STYLES ********/
@@ -184,4 +184,90 @@ footer span {
 	text-transform: lowercase;
 	color: #45610E;
 	font-size: 0.875em;
+}
+
+@media all and (min-width: 768px) {
+    /* Tablet styles here */
+	.bottom-section .content-wrapper {
+		width: 90%;
+		border-top: 5px solid #EEE;
+		border-bottom: 5px solid #EEE;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: left;
+	}
+	.section-one {
+		width: 29%;
+		padding-left: 15px;
+	}
+	
+	.section-two {
+		width: 42%;
+		border-top: none;
+		border-bottom: none;
+		border-left: 5px solid #EEE;
+		border-right: 5px solid #EEE;
+		padding: 0 30px;
+	}
+	
+	.section-three {
+		width: 29%;
+		padding-left: 15px;
+	}
+}
+ 
+@media all and (min-width: 1200px) {
+    /* Desktop styles here */
+	body {
+		font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+		font-size: 1rem;
+		color: #000000;
+	}
+
+	header .content-wrapper {
+		width: 100%;
+		max-width: 1200px;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+	}
+
+	.top-section,
+	.bottom-section {
+		display: flex;
+		justify-content: center;
+	}
+
+	.top-section .content-wrapper {
+		width: 100%;
+		max-width: 1200px;
+		}
+
+	.bottom-section .content-wrapper {
+		width: 100%;
+		max-width: 1200px;
+		border-top: 5px solid #EEE;
+		border-bottom: 5px solid #EEE;
+	}
+	
+	header h1 {
+		width: 70%;
+		padding: 38px 0;
+		text-align: left;
+		border-bottom: none;
+	}
+
+	header nav {
+		padding-bottom: 0;
+		width: 29%;
+		display: flex;
+		align-items: center;
+	}
+
+	header nav ul{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+	}
 }
