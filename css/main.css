@@ -133,7 +133,7 @@ header nav ul li a {
 .section-two,
 .section-three {
 	box-sizing: border-box;
-	padding: 0 40px;
+	padding: 0;
 }
 
 .section-one {
